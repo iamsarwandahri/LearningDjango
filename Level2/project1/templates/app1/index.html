@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Level Two</title>
+</head>
+<body>
+    {% if wpages %}
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Date</th>
+        </thead>
+        {% for acc in wpages %}
+        <tr>
+            <td>{{acc.name}}</td>
+            <td> {{acc.date}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p> NO RECORD FOUND </p>
+    {% endif %}
+
+</body>
+</html>
+
+
+
+
